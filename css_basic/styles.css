@@ -1,9 +1,6 @@
 body {
     display: flex; 
-    flex-direction: column; 
-    height: 100vh; 
-    margin: 2; 
-    
+    flex-direction: column;   
 }
 
 main {
