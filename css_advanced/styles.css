@@ -1,0 +1,124 @@
+:root {
+    --white: #ffffff;
+    --lilac: rgb(194, 113, 255);
+    --black: #071629;
+    --font: 'Source Sans pro'
+}
+
+*,
+*::before *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.background {
+    background-image: url(Object.png);
+    background-size: cover;
+    background-position: center;
+    background-position: top;
+    background-repeat: no-repeat;
+
+}
+
+header {
+    border-top: 20px;
+    border-right: 80px;
+    border-left: 80px;
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    /* Vertically centers the items in the nav */
+    justify-content: space-between;
+    /* Adds space between logo and menu */
+}
+
+
+ul {
+    list-style-type: none;
+    /* Removes the default bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Ensures the list items are aligned horizontally */
+}
+
+ul li {
+    margin-left: 20px;
+    /* Adds space between the list items */
+}
+
+ul li a {
+    text-decoration: none;
+    /* Removes the underline from links */
+    color: var(--white);
+}
+
+.align {
+    text-align: center;
+    justify-content: center;
+    color: var(--white);
+    font-family: var(--font);
+    padding-top: 45px;
+    border-top: 30px;
+}
+
+.align h1 {
+    font-size: 120px;
+    margin-bottom: 0%;
+
+}
+
+span {
+    padding: 0 30px;
+}
+
+button {
+    padding: 14px 24px;
+    border: none;
+    background-color: var(--lilac);
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    color: var(--white);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.middle {
+    color: var(--white);
+    text-align: center;
+    justify-content: center;
+}
+
+#colored-text {
+    color: var(--lilac);
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#pros {
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-evenly;
+    color: var(--white);
+}
+
+#pros div {
+    text-align: center;
+}
+#pros div P {
+font-style: italic;
+}
