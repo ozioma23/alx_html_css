@@ -2,7 +2,7 @@
     --white: #ffffff;
     --lilac: rgb(194, 113, 255);
     --black: #071629;
-    --grey:  #D8D8D8;
+    --grey: #D8D8D8;
     --font: 'Source Sans pro'
 }
 
@@ -113,7 +113,7 @@ button {
 }
 
 #pros div P {
-font-style: italic;
+    font-style: italic;
 }
 
 .change-background {
@@ -126,9 +126,9 @@ font-style: italic;
     font-size: larger;
 }
 
-.text  h3{
-text-align: left;
-padding-left: 40px;
+.text h3 {
+    text-align: left;
+    padding-left: 40px;
 }
 
 .text p {
@@ -144,23 +144,25 @@ padding-left: 40px;
     padding-right: 70px;
     padding-bottom: 30px;
 }
+
 .image-container {
-    position: relative; 
-    display: inline-block; 
+    position: relative;
+    display: inline-block;
 }
+
 .backgroundimage {
-    width: 100%; 
+    width: 100%;
     display: block;
 }
 
 .play-icon {
-    position: absolute; 
-    top: 30%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    width: 50px; 
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
     height: 50px;
-} 
+}
 
 .text2 {
     text-align: center;
@@ -168,17 +170,19 @@ padding-left: 40px;
     padding-bottom: 50px;
     margin-bottom: 50px;
 }
+
 .text2 span {
     color: var(--lilac);
     letter-spacing: 0;
     margin: 0;
     padding: 0;
 }
+
 .inline {
     display: inline-flex;
 }
 
-#popular .inline{
+#popular .inline {
     display: flex;
     color: var(--lilac);
 
@@ -186,14 +190,14 @@ padding-left: 40px;
     padding-left: 10px;
 }
 
-#popular .star{
+#popular .star {
     display: flex;
-    color: var(--lilac);  
+    color: var(--lilac);
 }
 
 .star div:last-child i {
-  color: var(--grey); 
-  margin-right: 5px;
+    color: var(--grey);
+    margin-right: 5px;
 }
 
 .star div:last-child i p {
@@ -208,13 +212,14 @@ padding-left: 40px;
 }
 
 .color2 {
-    text-align: center;     
+    text-align: center;
 }
 
 .color2 span {
-    color: var(--lilac); 
-   
+    color: var(--lilac);
+
 }
+
 #free {
     display: flex;
     padding-top: 50px;
@@ -223,12 +228,12 @@ padding-left: 40px;
 
 #bbb button {
     display: block;
-    margin: 50px auto; 
+    margin: 50px auto;
     border-top: 80px;
 }
 
 #faq h2 {
-text-align: center;
+    text-align: center;
 }
 
 .container {
@@ -247,42 +252,37 @@ text-align: center;
 #footer {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     gap: 20px;
     display: block;
-    padding-left: 50px;
+    padding-left: 100px;
 
 }
 
 .logo {
-    vertical-align: middle; 
-    display: inline-block; 
+    vertical-align: middle;
+    display: inline-block;
     height: 50px;
-    margin-left: 200px;
-    border-left: 200px; 
+    margin-left: 500px;
+    border-left: 200px;
     padding-left: 200px;
 }
 
 
-i{
-    color: var(--wh#ite);
-    display: inline-block;
-    justify-content: space-between;
-
+i {
+    color: var(--white);
 
 }
 
 .social-icons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-left: 800px;
     height: 50px;
-  }
+}
 
-  #background3 p {
+#background3 p {
     text-align: center;
     border-bottom: 100px;
-  }
-  
-
+}
