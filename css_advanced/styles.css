@@ -59,7 +59,11 @@ ul li {
 ul li a {
     text-decoration: none;
     color: var(--white);
+    transition: all 0.3s ease;
 }
+ ul li a:hover {
+    color: lightgray;
+ }
 
 .align {
     text-align: center;
@@ -75,6 +79,10 @@ ul li a {
     margin-bottom: 0%;
 }
 
+.spaces {
+    margin-right: 40px;
+    
+}
 button {
     padding: 14px 24px;
     border: none;
@@ -85,8 +93,13 @@ button {
     margin-top: 20px;
     color: var(--white);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+button:hover {
+    background-color: #9370db;
+
+}
 .middle {
     color: var(--white);
     text-align: center;
@@ -277,7 +290,8 @@ i {
 .social-icons {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 30px;
     margin-left: 800px;
     height: 50px;
 }
@@ -285,4 +299,8 @@ i {
 #background3 p {
     text-align: center;
     border-bottom: 100px;
+}
+
+.social-icons i:hover {
+    color: #007bff;
 }
