@@ -19,35 +19,52 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(fonts/SourceSansPro-Semibold.otf) format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
 :root {
     --primary-color: #FF6565;
     --secondary-color: #ffffff;
+    --tertiary-color: #071629;
+    --white: #F2F2F2;
     --font-size-large: 2rem;
 }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .background {
     background-image: url(background.png);
     background-size: cover;
     background-position: center;
-    background-position: top;
     background-repeat: no-repeat;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Source Sans Pro';
 }
+
+/* styling the header */
 
 header {
     padding-top: 20px;
-    padding-right: 150px;
-    padding-left: 150px;
-    margin-right: 80px;
-    margin-left: 80px;
-    padding-bottom: 170px;
-    margin-bottom: 150px;
+    padding-bottom: 150px;
+    width: 90%;
+    cursor: pointer;
+    margin: 0 auto;
 }
 
-.hamburger {
+#check,
+.menu {
     display: none;
 }
 
@@ -72,123 +89,7 @@ ul li a {
     color: var(--secondary-color);
 }
 
-ul li a:hover {
-    color: var(--primary-color);  
-  }
-
-
-/* Media Queries */
-
-/* For tablets (max-width: 768px) */
-@media (max-width: 768px) {
-    header {
-        position: relative;
-        padding-left: 10px;
-        padding-right: 10px;
-        display:flex
-    }
-
-
-    .background {
-        background-size: cover;        /* Ensures image covers the screen */
-        background-position: center;   /* Centers the image */
-        background-repeat: no-repeat;  /* Prevents tiling */
-        background-attachment: fixed;  /* Keeps the background fixed on scroll */
-    }
-
-    body {
-        font-size: 16px;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 0.95rem;
-    }
-
-
-    ul {
-        display: flex;  /* Display nav links horizontally */
-        list-style-type: none;
-        padding: 0;
-        margin-top: 20px;  /* Add space between header and nav links */
-    }
-
-    ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-        font-size: 0.95rem;
-    }
-}
-
-/* For mobile devices (max-width: 480px) */
-@media (max-width: 480px) {
-
-    .background {
-        background-size: cover;        /* Ensures image covers the screen */
-        background-position: center;   /* Centers the image */
-        background-repeat: no-repeat;  /* Prevents tiling */
-        background-attachment: fixed;  /* Keeps the background fixed on scroll */
-    }
-    header {
-        position: relative;
-    }
-
-    .straight {
-        display: flex;
-        justify-content: space-between; /* Align hamburger to the left, logo to the right */
-        align-items: center; /* Align items vertically */
-        width: 100%; /* Ensure it takes full width */
-    }
-
-    body {
-        font-size: 16px;
-    }
-    .hamburger {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        margin-left: 0px; /* Remove negative margin, adjust via flexbox */
-        padding-right: 50px;
-
-    }
-
-    .logo {
-        margin-right: 100px /* Push the logo to the left if needed */
-        
-    
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 0.9rem;
-    }
-
-    ul {
-        flex-direction: column;
-        margin-top: 5px;
-        display: none;
-    }
-
-    ul li {
-        margin-left: 0;
-        margin-bottom: 5px;
-        font-size: 0.9rem;
-    }
-}
-
+/* call to action section */
 .align {
     text-align: center;
     color: var(--secondary-color);
@@ -204,6 +105,9 @@ button {
     background-color: var(--primary-color);
     border-radius: 35px;
     color: var(--secondary-color);
+    align-items: center;
+    display: block;
+    margin: 20px auto 0;
 }
 
 .centre {
@@ -213,7 +117,150 @@ button {
     font-weight: 200;
 }
 
+/* what we do section */
+.bold {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.text {
+    text-align: center;
+}
+
+.aligning {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+span{
+    font-size: 5rem;
+    color: #FF6565;
+    opacity: 0.9;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-weight: 200;
+}
+
+
+/* our resutls section */
+#black-background {
+    background-image: url(background2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--secondary-color);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-weight: 100;
+}
+
+.arrange {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.pentagon {
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* contact us*/
+
+.form-container {
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 100px auto;
+}
+
+.form-container h2 {
+    text-align: center;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* footer section */
+
+.footer1 {
+    background-color: var(--tertiary-color);
+}
+
+.footer1 p {
+    text-align: center;
+    color: var(--secondary-color)
+}
+
+.footer {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: block;
+    padding-left: 100px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+}
+
+i {
+    color: var(--white);
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 80px;
+    gap: 30px;
+    margin-left: 0 auto;
+
+}
+
+
+/* Media Queries */
+
+/* For tablets (max-width: 768px) */
 @media (max-width: 768px) {
+
+    header {
+        display: flex;
+        width: 90%;
+    }
+
+    nav ul {
+        padding-left: 150px;
+    }
+
+    body {
+        font-size: 16px;
+        padding: 5px;
+    }
+
     .align {
         text-align: left;
         font-size: 1rem;
@@ -222,6 +269,7 @@ button {
     p {
         font-weight: 700;
         font-size: 0.9rem;
+        text-align: center;
     }
 
     button {
@@ -235,7 +283,64 @@ button {
     }
 }
 
+
+
+/* For mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
+
+    body {
+        max-width: 480px;
+        font-size: 16px;
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
+    }
+
+    header {
+        display: flex;
+        padding: 40px 80px; /* spaces around the header both top/bottom and sides(left/right)*/
+        margin: 40px
+    }
+
+    .straight {
+        padding: 10px;
+        margin-bottom: 40px;
+        margin-left: -30px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Adjust spacing between list items */
+        width: 112%;
+        position: fixed;
+        right: -100%;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-top: 80px;
+        z-index: 100;
+    }
+
+    .menu {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: var(--white);
+        position: relative;
+    }
+
+    .menu {
+        top: 10%;
+        right: 88px;
+        transform: translateY(-100%);
+    }
+
+    /* linking the hamburger/check icons with the list in header 2 */
+    #check:checked~ul {
+        right: 0;
+    }
+
     .align {
         text-align: center;
         font-size: 0.9rem;
@@ -254,6 +359,7 @@ button {
     .centre {
         padding-bottom: 30px;
         font-weight: 300;
-        text-align:center;
+        text-align: center;
     }
+
 }
