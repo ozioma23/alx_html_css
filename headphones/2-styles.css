@@ -82,12 +82,19 @@ ul {
 
 ul li {
     margin-left: 20px;
+    
 }
 
 ul li a {
     text-decoration: none;
+    transition: color 0.3s ease;
     color: var(--secondary-color);
 }
+
+li a:hover, li a:active {
+    color: var(--primary-color) /* Changes the color on hover and active states */
+}
+
 
 /* call to action section */
 .align {
@@ -109,6 +116,11 @@ button {
     display: block;
     margin: 20px auto 0;
 }
+
+/* to create a lighter colour transition effect when hoovering over the button */
+button:hover, button:active {
+    opacity: 0.9; /* Slight transparency on hover/active */
+ }
 
 .centre {
     text-align: center;

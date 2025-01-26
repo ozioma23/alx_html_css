@@ -1,70 +1,68 @@
-/* Reset CSS */
+/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Adding the recommended fonts SourceSansPrO */
 @font-face {
     font-family: 'Source Sans Pro';
-    src: url('./source-sans-pro/SourceSansPro-Bold.otf') format('opentype');
-    font-weight: bold;
+    src: url(fonts/SourceSansPro-Bold.otf) format('opentype');
+    font-weight: 900;
     font-style: normal;
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: 'Source Sans Pro';
-    src: url('./source-sans-pro/SourceSansPro-Regular.otf') format('opentype');
-    font-weight: normal;
+    src: url(fonts/SourceSansPro-ExtraLight.otf) format('opentype');
+    font-weight: 200;
     font-style: normal;
-  }
+}
 
-  /* Adding recommended fonts SpinCycleOT*/
-  @font-face {
-    font-family: 'Spin Cycle OT';
-    src: url('./Spin-Cycle-OT/spincycle_3d_ot.otf') format('opentype');
-    font-weight: bold;
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(fonts/SourceSansPro-Semibold.otf) format('opentype');
+    font-weight: 100;
     font-style: normal;
-  }
+}
 
-  @font-face {
-    font-family: 'Spin Cycle OT';
-    src: url('./Spin-Cycle-OT/spincycle_ot.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  /* general body specifications */
-body {
-    display: flex;
-    font-family: 'Source Sans Pro', 'Spin Cycle OT' ;
-    margin: 0 auto; /* Center the content horizontally */
-    max-width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    display: flex;
-    flex-direction: column;
+:root {
+    --primary-color: #FF6565;
+    --secondary-color: #ffffff;
+    --tertiary-color: #071629;
+    --white: #F2F2F2;
+    --font-size-large: 2rem;
 }
 
 
+/* Define the bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+    }
+}
 
+/* Define the bounce animation */
+@keyframes bounce-always {
+    0%, 100% {
+        transform: translateY(0); /* Original position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up slightly */
+    }
+}
 
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+}
 
-
-
-
-
-
-
-
-
-
-/* General styling */
-
-/* styling section1 */
-
-   /* adding the background image to the header and main section */
-.section1 {
-    background-image: url(images/headphones_hero_1.jpg);
+.background {
+    background-image: url(background.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -77,876 +75,492 @@ body {
 }
 
 /* styling the header */
-/* General styling of the header and making the full header not touch the sides of the screen */
 
 header {
-    width: 80%;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    width: 90%;
     cursor: pointer;
     margin: 0 auto;
-    padding: 10px;
 }
 
-
-/* spacing the 2 divs in the header appropriately */
-nav {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* getting the contents of the ul in a straight line by flexing the display*/
-.header2{    
-    display: flex; 
-    flex-direction: row; 
-    gap: 2px;
-}
-
-/* spacing between each list item and removing the dots */
-.header2 li{
-    list-style: none;
-    padding: 12px;
-}
-
-/* changing the anchor tag text colour */
-.header2 li a {
-    text-decoration: none;
-    color: #dce0e3;
-    font-weight: bold;
-    font-size: 13px;
-}
-
-
-/* changing the hoover color of the header */
-.header2 li a:hover, a:active {
-    color: #FF6565; /* Changes color to red on hover or active states */
-}
-
-/* hidding the hamburger menu icon and checker */
-#check , .menu {
+#check,
+.menu {
     display: none;
 }
-/* header done and dusted */
 
-/* styling the main section still in section1 but the actual hero section */
-.hero {
-    margin: 10px;
-    display: flex;  
-    flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+    margin-left: 20px;
+    
+}
+
+ul li a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: var(--secondary-color);
+}
+
+li a:hover, li a:active {
+    color: var(--primary-color) /* Changes the color on hover and active states */
+}
+
+
+/* call to action section */
+.align {
     text-align: center;
-    margin-top: 150px;
+    color: var(--secondary-color);
 }
 
-/* styling the h1 text div inside hero1 */
-.hero1 {
-    color: white;
-    font-size: 32px;
-    line-height: 1;
-    margin-top: 90px;
-    font-family: 'Source Sans Pro';
-    font-weight: bold;
-}
-
-/* styling the first p in the div inside hero1  */
 p {
-    color: rgba(255, 255, 255, 0.733);
-    font-size: 16px;
-    line-height: 1.5;
-    margin-top: 3px ;
-    font-weight: bold;
-    font-family:'Source Sans Pro';
+    font-weight: 900;
 }
 
-/* styling the buttons */
-.first-button {
-    cursor: pointer;
-    background-color: #FF6565;
-    color: white;
-    font-size: 11px;
-    padding: 10px 20px;
-    margin-top: 20px;
+button {
+    padding: 15px 26px;
     border: none;
-    border-radius: 50px; /* Optional, for rounded corners */
-    box-shadow: 5px -5px 30px rgba(0, 0, 0, 0.5); /* Prominent shadow */
-    transition: box-shadow 0.9s ease, transform 0.9s ease; /* Smooth hover effects *//
- }
+    background-color: var(--primary-color);
+    border-radius: 35px;
+    color: var(--secondary-color);
+    align-items: center;
+    display: block;
+    margin: 20px auto 0;
+}
 
- /* to create a lighter colour transition effect when hoovering over the button */
- button:hover, button:active {
+/* to create a lighter colour transition effect when hoovering over the button */
+button:hover, button:active {
     opacity: 0.9; /* Slight transparency on hover/active */
  }
 
- /* styling the 2nd p in inside hero1  */
-.p-hero {
-    color: rgba(255, 255, 255, 0.665);
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: normal;
-    font-family:'Source Sans Pro';
-    display: block; /* Ensures the text block behaves as a block element */  
-    margin-top: 50px;
+.centre {
+    text-align: center;
+    color: var(--secondary-color);
+    padding-bottom: 100px;
+    font-weight: 200;
+}
+
+/* what we do section */
+.bold {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.text {
     text-align: center;
 }
 
-/* styling section 2 */
-.section2 {
-    background-color: white;
+.aligning {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+span{
+    font-size: 5rem;
+    color: var(--primary-color);
+    opacity: 0.9;
+    animation: scale 2s infinite alternate; /* Alternate between growing and shrinking */ /* Add scaling animation */
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-weight: 200;
+}
+
+/* Apply animation to "What we do..." section items */
+.aligning div:hover {
+    animation: bounce 0.8s ease-in-out;
+}
+
+/* Apply the bounce animation to "What we do..." section items */
+.aligning div {
+    animation: bounce-always 1s ease-in-out infinite;
+}
+
+
+/* our resutls section */
+#black-background {
+    background-image: url(background3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    box-sizing: border-box;
-    text-align: center;
-    margin: 0 auto;
+    color: var(--secondary-color);
     width: 100%;
     height: 100vh;
     font-family: 'Source Sans Pro';
-}
-
-/* Styling the first div with the h2 and p */
-.section2-1 {
-    margin-top: 80px;
-}
-
-.section2-1 h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 60px;
-}
-
-/* styling all the p in section 2 */
-.p2-1 {
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.737);
-    font-weight: normal;
-}
-
-.p2-2 {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.737);
-    font-weight: normal;
-}
-
-/* styling the icons in section 2 */
-.holberton_school-icon-ic_hearing, .holberton_school-icon-ic_music, .holberton_school-icon-ic_video, .holberton_school-icon-ic_sound{
-    font-size: 5rem;
-    color: #FF6565;
-    opacity: 0.9;
-}
-
-
-/* styling section 3 */
-.section3 {
-    background-image: url(images/headphones_hero_2.jpg);
-    background-size: cover;
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    width: 100%; /* Makes sure the container takes up the full width */
-    height: 100%; /* Adjust the height as needed (e.g., 100% of the viewport height) */
-    text-align: center;
-    padding: 15px 50px;
     margin: 0 auto;
-    font-family:'Source Sans Pro' ;
-    color: white;
-    display: flex;
-    flex-direction: column;
+    padding-top: 100px;
+    font-weight: 100;
 }
 
-/* styling the text divs in section 3 */
-.section3-1 {
-    margin-top: 100px;
-}
-
-.section3-1 h2 {
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.section3-1 p {
-    font-size: 16px;
-    margin-top: 50px;
-    font-weight: normal;
-}
-
-/* creating and styling the pentagon */
-.image {
-    display: flex;
-    flex-direction: row;
-    margin-top: 40px;
-    padding: 15px 50px;
+.arrange {
     text-align: center;
-    margin-bottom: 80px;
+    padding-bottom: 30px;
+}
+
+.pentagon {
+    display: flex;
+    justify-items: center;
     justify-content: space-around;
-    gap: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-.image3 {
-    width: 150px;
-    position: relative;
-  }
-  .pentagon {
-    width: 140px;
-    height: 140px;
-    background-color: #ff6565;
-    clip-path: polygon(49% 0%, 100% 41%, 78% 100%, 21% 100%, 0% 41%);
-    margin: 2px auto;
-  }
-  
-  .pentagon-text {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .pentagon-text h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
+/* Apply animation to "Our results" section items */
+.pentagon :hover {
+    animation: bounce 0.8s ease-in-out;
+}
+.pentagon {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-  .pentagon-text p {
-    font-size: 9px;
-    font-weight: normal;
-    margin-top: 10px;
-  }
+/* contact us*/
 
+.form-container {
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 100px auto;
+}
 
-
-
-
-/* styling section 4 */
-.section4 {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Source Sans Pro';
-    box-sizing: border-box;
-    background-color: white;
-    background-position: center; /* Centers the image */
-    width: 40%; /* Makes sure the container takes up the full width */
-    height: 100%; /* Adjust the height as needed (e.g., 100% of the viewport height) */
+.form-container h2 {
     text-align: center;
-    padding: 15px 50px;
-    margin: 0 auto;
 }
 
-/* styling the h2 in section 4 */
-.section4 h2 {
-    font-weight: bold;
-    font-size: 32px;
-    color: black;
-    margin-top: 60px;
-}
 
-/* styling the form */
-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* Input and textarea styles */
-input, textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    margin-bottom: 20px;
-    border: none; /* Removes the box */
-    border-bottom: 2px solid #ccc; /* Adds a line */
-    outline: none; /* Removes the blue border when focused */
-    font-size: 16px;
-    font-weight: bold;
-    background-color: transparent;
-}
-
-input:focus, textarea:focus {
-    border-bottom: 2px solid #e5ece5; /* Changes the line color on focus */
-}
-
-/* Call-to-Action Button */
-.second-button {
-    width: 50%;
-    background-color: #FF6565;
-    color: white;
-    padding: 10px 15px;
     border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 11px;
-    margin: 0 auto;
-    margin-bottom: 120px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
 }
 
-button:hover {
-    background-color: #676a67;
-    opacity: 0.9;
+.form-group {
+    margin-bottom: 20px;
 }
 
-/* styling section 5 */
-.section5 {
-    background-color: rgb(23, 19, 19);
-    background-size: cover;
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    width: 100%; /* Makes sure the container takes up the full width */
-    height: 100%; /* Adjust the height as needed (e.g., 100% of the viewport height) */
+/* footer section */
+
+.footer1 {
+    background-color: var(--tertiary-color);
+}
+
+.footer1 p {
     text-align: center;
-    padding: 15px 50px;
-    margin: 0 auto;
-    font-family:'Source Sans Pro' ;
-    color: white;
-    display: flex;
-    flex-direction: column;
+    color: var(--secondary-color);
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;  
-}
-.foot {
-    display: flex;
-   flex-direction: row;
-   margin-top: 60px;
-   margin-left: 120px;
-   margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: block;
+    padding-left: 100px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
 }
 
-/* arranging the icons in footer */
-.footer-icons {
+i {
+    color: var(--white);
+}
+
+.social-icons {
     display: flex;
     flex-direction: row;
-    color: white;
-    margin-left: 450px;
+    justify-content: flex-end;
+    padding-right: 80px;
+    gap: 30px;
+    margin-left: 0 auto;
+
 }
 
- /* more arrangements for the icons in the footer and giving them more circles */
- .footer-icons i {
-    padding: 10px;
- }
- 
- /* experimenting styling the icons to be centered in a circle */
- .icon-wrapper {
-    display: inline-flex; /* Aligns the icons inline */
-    margin: 9px;
-    justify-content: center; /* Centers the icon horizontally */
-    align-items: center; /* Centers the icon vertically */
-    width: 22px; /* Adjust the size of the circle */
-    height: 22px; /* Make it a perfect circle */
-    background-color: white; /* Fill the area with white */
-    border-radius: 50%; /* Creates the circular shape */
-    color: #1f2021; /* Icon or text color */
-    font-size: 14px; /* Adjust the font size of the icon */
-  }
- 
- /* Arranging and styling the last p which is the copyright and logo */
- .pfoot {
-    color: #dce0e369;
-    text-align: center;
-    margin-left: 130px;
-    margin-bottom: 30px;
- }  
- /* Footer section done and dusted */
 
- /* End of section1 general styling */
+/* Media Queries */
 
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* STYLE 1 - DESKTOP STYLING(Desktops, Laptops, other large screens) */
- /* Default Styles for Desktop (min-width: 1000px) */
-@media (min-width: 1000px) { 
-    body {
-        max-width: 1000px; /* Content width limit */
-        padding: 5px; /* Add some spacing around the content */
+    header {
+        display: flex;
+        width: 90%;
     }
 
-/* styling section 2 */
-/* styling the div containing the icons and texts */
-.image-text {
-    display: flex;
-    flex-direction: row;
-    margin-top: 80px;
-    padding: 15px 50px;
-    text-align: center;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-/* spacing the icons and the text */
-.icons {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.p2-2 {
-    margin-top: -15px;
-}
-
-/* styling section 3 */
-.image {
-    display: flex;
-    flex-direction: row;
-    margin-top: 40px;
-    padding: 15px 50px;
-    text-align: center;
-    margin-bottom: 80px;
-    justify-content: space-around;
-    gap: 20px;
-}
-/* End of desktop styling */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Styling for tablet */
-/* Tablet Styles (max-width: 999px) */
-@media only screen and (min-width: 481px) and (max-width: 999px) { 
-
-    body {
-        min-width: 481px;
-        max-width: 999px; /* Content width limit */
-        padding: 5px; /* Add some spacing around the content */
+    nav ul {
+        padding-left: 150px;
     }
 
-    /* keeping the background image centered */
-    .section1 {
-        background-position: center center; /* Keeps the image centered for mobile */
+    body {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .align {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    p {
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .centre {
+        padding-bottom: 50px;
+        font-weight: 400;
+    }
+
+    .bold {
+        padding-top: 50px;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .aligning {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+
+    #black-background {
+        background-size: cover;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .arrange {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .pentagon {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .form-container {
+        width: 50%;
+        max-width: 400px;
+    }
+
+    .form-container {
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        margin: 100px auto;
+    }
+
+    .form-container h2 {
+        text-align: center;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+
+    .footer1 p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+
+    body {
+        max-width: 480px;
+        font-size: 16px;
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
     }
 
     header {
-        padding: 70px 1px;
+        display: flex;
+        padding: 40px 80px; /* spaces around the header both top/bottom and sides(left/right)*/
+        margin: 40px
     }
 
-    .hero {
-        margin-top: 200px;
+    .straight {
+        padding: 10px;
+        margin-bottom: 40px;
+        margin-left: -30px;
     }
 
-    .first-button {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Adjust spacing between list items */
+        width: 112%;
+        position: fixed;
+        right: -100%;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         margin-top: 80px;
+        z-index: 100;
     }
 
-    .p-hero {
-        margin-top: 45px;
-        margin-bottom: 80px;
+    .menu {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #dce0e3;
+        position: relative;
+    }
+
+    .menu {
+        top: 10%;
+        right: 88px;
+        transform: translateY(-100%);
+    }
+
+    /* linking the hamburger/check icons with the list in header 2 */
+    #check:checked~ul {
+        right: 0;
+    }
+
+    .align {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    button {
+        padding: 10px 18px;
+        font-size: 0.8rem;
+    }
+
+    .centre {
+        padding-bottom: 30px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .bold {
+        padding-top: 30px;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .aligning {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
     }
 
 
-    /* styling section 2 */
-    .section2{
-        width: 100%;
-        height: 100%;
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
     }
 
-    .section2-1 {
-        margin-top: 150px;
-    }
-/* styling the div containing the icons and texts */
-.image-text {
-    padding: 40px 50px;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping to the next row */
-    gap: 10px; /* Optional spacing */
-    margin: 0 auto 0 0; /* Top and bottom: auto; left: 0; right: auto */
-    width: 100%; /* Adjust width as needed */
-}
-
-/* spacing the icons and the text */
-.icons {
-    gap: 25px;
-    margin-bottom: 60px;
-    flex: 1 1 calc(50% - 10px); /* 50% width minus the gap for two columns */
-    box-sizing: border-box; /* Ensure proper sizing */
-    text-align: center; /* Optional */
- 
-}
-
-.p2-2 {
-    margin-top: 15px;
-}
-
-/* styling section 3 */
-.image {
-    padding: 40px 50px;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping to the next row */
-    gap: 10px; /* Optional spacing */
-    margin: 0 auto 0 0; /* Top and bottom: auto; left: 0; right: auto */
-    width: 100%; /* Adjust width as needed */
-}
-
-/* spacing the icons and the text */
-.image3 {
-    gap: 25px;
-    margin-bottom: 60px;
-    flex: 1 1 calc(50% - 10px); /* 50% width minus the gap for two columns */
-    box-sizing: border-box; /* Ensure proper sizing */
-    text-align: center; /* Optional */
-}
-
-/* styling section 4 */
-.section4 {
-    width: 100%;
-    height: 100%;
-}
-
-/* styling section 5 */
-.section5 {
-    width: 100%;
-    height: 100%;
-}
-
-.footer {
-    display: flex;
-    flex-direction: column;  
-}
-.foot {
-    display: flex;
-   flex-direction: row;
-   margin-top: 60px;
-   margin-left: 70px;
-   margin-bottom: 40px;
-}
-
-/* arranging the icons in footer */
-.footer-icons {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    margin-left: 200px;
-}
-
- /* End of tablet styling */
-}
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* styling for mobile devices */
-/* Mobile Styles (max-width: 480px) */
- @media (max-width: 480px) { 
-    body {
-        max-width: 480px; /* Content width limit */
+    p {
+        font-weight: 300;
+        font-size: 0.8rem;
     }
 
-    /* Styling section 1 */
-    .section1 {
-        width: 100%;
-        height: 100%;
+    #black-background {
+        background-size: cover;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-    /* styling the header */
-/* General styling of the header and making the full header not touch the sides of the screen */
 
-header {
-    display: flex;
-    padding: 40px 80px; /* spaces around the header both top/bottom and sides(left/right)*/
-  }
+    .arrange {
+        text-align: center;
+        padding-bottom: 30px;
+    }
 
-/* Centering the image  */
-.header1 {
-    padding: 10px;
-    margin-bottom: 50px;
-    margin-left: -50px;
+    .pentagon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 15px;
+
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .footer1 p {
+        font-size: 12px;
+    }
 }
-
-/* getting the contents of the ul in a straight line by flexing the display*/
-.header2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Adjust spacing between list items */
-    width: 112%;
-    position: fixed;
-    right: -100%;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-top: 170px;
-    z-index: 100;
-  }
-
-/* changing the anchor tag text colour */
-.header2 li a {
-    padding: 10px;
-    font-size: 14px; /* Slightly increase font size for readability */
-    /* text-transform: lowercase; to make the text all one way no matter how you wrote it in html */
-}
-
-
-/* changing the hoover color of the header */
-.header2 li a:hover, a:active {
-    color: #FF6565; /* Changes color to red on hover or active states */
-}
-
-/* styling the hamburger menu */
-
-/* Making the hamburger menu icons visible */
-.menu {
-    display: block;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #dce0e3;
-    position: relative;
-}
-
-.menu {
-    top: 10%;
-    right: 88px;
-    transform: translateY(-100%);
-}
-
-/* linking the hamburger/check icons with the list in header 2 */
-#check:checked~ .header2 {
-    right: 0;
-}
-
-/* header done and dusted */
-
-/* styling the main section still in section1 but the actual hero section */
-.hero {
-    margin: 0 auto;
-}
-
-/* styling the buttons */
-.first-button {
-    margin-top: 20px;
- }
-
- /* to create a lighter colour transition effect when hoovering over the button */
- button:hover, button:active {
-    opacity: 0.9; /* Slight transparency on hover/active */
- }
-
- /* styling the 2nd p in inside hero1  */
-.p-hero { 
-    margin-top: 25px;
-}
-
-/* styling section 2 */
-.section2 {
-    width: 100%;
-    height: 100%;
-}
-
-/* styling the div containing the icons and texts */
-.image-text {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-    padding: 15px 50px;
-    text-align: center;
-}
-
-/* spacing the icons and the text */
-.icons {
-    gap: 25px;
-    margin-bottom: 50px;
-}
-
-.p2-2 {
-    margin-top: 35px;
-}
-/* section 2 done and dusted */
-
-/* styling section 3 */
-.section3-1 {
-    padding: 10px;
-}
-
-.image {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-}
-
-.image3 {
-    padding: 20px;
-}
-/* section 3 done */
-
-/* styling section 4 */
-.section4 {
-    width: 100%;
-    height: 100%;
-}
-
-/* styling section 5 */
-
-.footer {
-    width: 50%;
-    margin: 0 auto;
-}/* Improved CSS */
-
-.foot {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0;
-    gap: 15px;
-}
-
-.footer-icons {
-    margin-left: 0;
-}
-}
-
-.pfoot {
-    margin-left: 0;
-    margin-top: -30px;
-}
- /* End of styling for mobile devices */
- 
-
-
-
- 
